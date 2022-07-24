@@ -1,0 +1,18 @@
+html{
+    background-color:rgb(96, 88, 163);
+  background-size: cover;
+    min-height: 100%;
+  }
+  
+  body{
+    background:none;
+  }
+  
+  #advanced-search-form{
+    background-color: #fff;
+    max-width: 800px;
+    margin: 5% auto 0;
+    padding: 40px;
+    color: #858b8e;
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.2);
+  }
