@@ -29,6 +29,7 @@ import "./CreditResult.css";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import CurrencyFormat from "react-currency-format";
+import { experimentalStyled as styled } from '@mui/material/styles';
 
 function CreditResult() {
   const {
@@ -93,6 +94,7 @@ function CreditResult() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const handleReset = () => {window.location.reload(true);};
 
   const Othertheme = createTheme({
     palette: {
@@ -160,7 +162,13 @@ function CreditResult() {
       setValueMonthBlack(value_total_month_black);
 
     }   
-  
+    const Item = styled(Paper)(({ theme }) => ({
+      backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+      ...theme.typography.body2,
+      padding: theme.spacing(2),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    }));
 
   
 
@@ -186,14 +194,26 @@ function CreditResult() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Su Credito Sera Efectuado ¿Dese Evaluar Otro Credito?
           </Typography>
+
+          <br/>
+      <ThemeProvider theme={Othertheme}>
+        <Button
+          onClick={handleReset}
+          color="primary"
+          variant="contained"
+          disableElevation
+        >
+          Volver al Simulador
+        </Button>
+      </ThemeProvider>
         </Box>
       </Modal>
     </div>
 
-      <Grid container spacing={2}>
-        
-        {basic?(<Grid item xs={4}>
-          <Card sx={{ maxWidth: 350, backgroundColor: "#5CBBDC" }}>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+      {basic?(<Grid item xs={4}>
+          <Card sx={{ maxWidth: "100%", backgroundColor: "#5CBBDC" }}>
             <CardHeader title="Seguro Básico"></CardHeader>
             <CardContent>
               <List dense={dense}>
@@ -254,7 +274,7 @@ function CreditResult() {
         
         {gold?(
             <Grid item xs={4}>
-            <Card sx={{ maxWidth: 350, backgroundColor: "#E1CC55" }}>
+            <Card sx={{ maxWidth: "100%", backgroundColor: "#E1CC55" }}>
               <CardHeader title="Seguro Gold"></CardHeader>
               <CardContent>
                 <List dense={dense}>
@@ -312,7 +332,7 @@ function CreditResult() {
         ):""}
         
         {black?(<Grid item xs={4}>
-          <Card sx={{ maxWidth: 350, backgroundColor: "#6D6E70" }}>
+          <Card sx={{ maxWidth: "100%", backgroundColor: "#6D6E70" }}>
             <CardHeader title="Seguro Black"></CardHeader>
             <CardContent>
               <List dense={dense}>
@@ -367,8 +387,26 @@ function CreditResult() {
             </CardActions>
           </Card>
         </Grid>):""}
+      </Grid>
+    </Box>
+
+      <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+        
+       
         
       </Grid>
+      
+      <br/>
+      <ThemeProvider theme={Othertheme}>
+        <Button
+          onClick={handleReset}
+          color="primary"
+          variant="contained"
+          disableElevation
+        >
+          Volver al Simulador
+        </Button>
+      </ThemeProvider>
     </div>
   );
 }
