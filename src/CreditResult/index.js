@@ -235,7 +235,7 @@ function CreditResult() {
                   <ListItemIcon>
                     <StarRate />
                   </ListItemIcon>
-                  <ListItemText primary="Puedes Asegurar desde tu cel hasta ti vehiculo" />
+                  <ListItemText primary="Puedes Asegurar desde tu cel hasta tu vehiculo" />
                 </ListItem>
 
                 <ListItem>
@@ -243,6 +243,11 @@ function CreditResult() {
                     <StarRate />
                   </ListItemIcon>
                   <ListItemText primary="Puedes Acceder con ingresos minimos" />
+                </ListItem>
+
+                <ListItem>
+                  <br/>
+                  <Divider light />
                 </ListItem>
               </List>
               <Divider light />
@@ -277,32 +282,38 @@ function CreditResult() {
             <Card sx={{ maxWidth: "100%", backgroundColor: "#E1CC55" }}>
               <CardHeader title="Seguro Gold"></CardHeader>
               <CardContent>
-                <List dense={dense}>
-                  <ListItem>
-                    <ListItemIcon>
-                      <StarRate />
-                    </ListItemIcon>
-                    <ListItemText primary="Cobertura del 30% del valor avaluado" />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <StarRate />
-                    </ListItemIcon>
-                    <ListItemText primary="Pago Mensual o Anual" />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <StarRate />
-                    </ListItemIcon>
-                    <ListItemText primary="Puedes Asegurar desde tu cel hasta ti vehiculo" />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <StarRate />
-                    </ListItemIcon>
-                    <ListItemText primary="Puedes Acceder con ingresos minimos" />
-                  </ListItem>
-                </List>
+              <List dense={dense}>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarRate />
+                  </ListItemIcon>
+                  <ListItemText primary="Cobertura del 60% del valor avaluado" />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarRate />
+                  </ListItemIcon>
+                  <ListItemText primary="Pago Mensual o Anual" />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarRate />
+                  </ListItemIcon>
+                  <ListItemText primary="Puedes Asegurar tu vehiculo" />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarRate />
+                  </ListItemIcon>
+                  <ListItemText primary="Protección contra robo" />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarRate />
+                  </ListItemIcon>
+                  <ListItemText primary="Protección contra daños" />
+                </ListItem>
+              </List>
                 <Divider light />
   
                 <TableContainer component={Paper}>
@@ -340,7 +351,7 @@ function CreditResult() {
                   <ListItemIcon>
                     <StarRate />
                   </ListItemIcon>
-                  <ListItemText primary="Cobertura del 30% del valor avaluado" />
+                  <ListItemText primary="Cobertura del 90% del valor avaluado" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
@@ -352,13 +363,19 @@ function CreditResult() {
                   <ListItemIcon>
                     <StarRate />
                   </ListItemIcon>
-                  <ListItemText primary="Puedes Asegurar desde tu cel hasta ti vehiculo" />
+                  <ListItemText primary="Puedes Asegurar tu vehiculo o tecnología" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <StarRate />
                   </ListItemIcon>
-                  <ListItemText primary="Puedes Acceder con ingresos minimos" />
+                  <ListItemText primary="Protección contra robo" />
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <StarRate />
+                  </ListItemIcon>
+                  <ListItemText primary="Protección contra daños" />
                 </ListItem>
               </List>
               <Divider light />
